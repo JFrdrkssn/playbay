@@ -6,7 +6,7 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
     """
-    The content field in blog posts will use Summernote
+    The Blog Post section of the admin page
     """
 
     list_display = ('title', 'slug', 'status', 'created_on')
