@@ -22,6 +22,6 @@ class CommentAdmin(SummernoteModelAdmin):
     The Comment section of the admin page
     """
 
-    list_display = ('name', 'body', 'post', 'created_on', 'approved')
+    list_display = ('name', 'username' 'body', 'post', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')
-    search_fields = ['name', 'email', 'body']
+    search_fields = ['name', 'username', 'email', 'body']
