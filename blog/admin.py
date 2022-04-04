@@ -8,4 +8,6 @@ class PostAdmin(SummernoteModelAdmin):
     """
     The content field in blog posts will use Summernote
     """
+
+    prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('content')
