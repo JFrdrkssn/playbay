@@ -10,4 +10,5 @@ class PostAdmin(SummernoteModelAdmin):
     """
 
     prepopulated_fields = {'slug': ('title',)}
+    list_filter = ('status', 'created_on')
     summernote_fields = ('content')
