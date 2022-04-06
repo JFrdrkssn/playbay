@@ -149,3 +149,9 @@ body {
     background: transparent;
     border: none;
 }
+
+/* Footer */
+
+.text-blue {
+    color: rgb(0, 55, 145);
+}
