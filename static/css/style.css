@@ -1,6 +1,12 @@
+/* General CSS */
+
 body {
     background-color: #F9FAFC;
     font-family: 'Poppins', sans-serif;
+}
+
+.text-blue {
+    color: rgb(0, 55, 145);
 }
 
 /* Header */
@@ -148,10 +154,4 @@ body {
     color: #E84610;
     background: transparent;
     border: none;
-}
-
-/* Footer */
-
-.text-blue {
-    color: rgb(0, 55, 145);
 }
