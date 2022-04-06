@@ -50,3 +50,17 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"{self.name} said {self.body}"
+
+
+class Games(models.Model):
+    """
+    Model for monthly free games from PlayStation
+    Shown on front page.
+    """
+    title = models.CharField(max_length=50, unique=True)
+    content = models.TextField()
+    featured_image = CloudinaryField('image', default='placeholder')
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
