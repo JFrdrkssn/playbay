@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
@@ -21,9 +21,9 @@ class PostDetail(View):
     
     """
 
-    def get(self, request, slug, *args, **kwargs):
+    def get(self, request, id, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
+        post = get_object_or_404(queryset, id=id)
         comments = post.comments.order_by('created_on')
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
@@ -41,9 +41,9 @@ class PostDetail(View):
             },
         )
 
-    def post(self, request, slug, *args, **kwargs):
+    def post(self, request, id, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
+        post = get_object_or_404(queryset, id=id)
         comments = post.comments.order_by('created_on')
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
@@ -60,7 +60,7 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
-        else: 
+        else:
             comment_form = CommentForm()
 
         return render(
@@ -81,8 +81,8 @@ class PostLike(View):
     
     """
 
-    def post(self, request, slug):
-        post = get_object_or_404(Post, slug=slug)
+    def post(self, request, id):
+        post = get_object_or_404(Post, id=id)
 
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
@@ -90,4 +90,4 @@ class PostLike(View):
             post.likes.add(request.user)
 
         # Reloads page when liking or unliking
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+        return HttpResponseRedirect(reverse('post_detail', args=[id]))
