@@ -9,7 +9,6 @@ class Post(models.Model):
     Model for posts on the blog.
     """
     title = models.CharField(max_length=150, unique=True)
-    slug = models.SlugField(max_length=150, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
