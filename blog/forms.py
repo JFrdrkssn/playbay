@@ -50,3 +50,16 @@ class AddPostForm(forms.ModelForm):
                 'class': 'form-control'
                 })
         }
+
+
+class EditPostForm(AddPostForm):
+    """
+    
+    """
+
+    class Meta(AddPostForm.Meta):
+        """
+        
+        """
+
+        exclude = ('featured_image',)
