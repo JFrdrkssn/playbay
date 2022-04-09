@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm, AddPostForm, EditPostForm
@@ -49,7 +50,6 @@ class PostDetail(View):
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
-
         comment_form = CommentForm(data=request.POST)
 
         # Automatically passes in email and username
@@ -77,7 +77,7 @@ class PostDetail(View):
         )
 
 
-class AddPost(generic.CreateView):
+class AddPost(LoginRequiredMixin, generic.CreateView):
     """
     
     """
@@ -93,7 +93,7 @@ class AddPost(generic.CreateView):
         return super().form_valid(form)
 
 
-class EditPost(generic.UpdateView):
+class EditPost(LoginRequiredMixin, generic.UpdateView):
     """
     
     """
@@ -103,7 +103,7 @@ class EditPost(generic.UpdateView):
     template_name = 'edit_post.html'
 
 
-class DeletePost(generic.DeleteView):
+class DeletePost(LoginRequiredMixin, generic.DeleteView):
     """
     
     """
