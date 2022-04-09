@@ -17,7 +17,7 @@
                 <img src="https://res.cloudinary.com/jfrdrkssn/image/upload/q_auto:eco/v1649246606/header-angelo-abear-unsplash_wclqyn.jpg"
                     width="100%">
                 {% else %}
-                <img src="" width="100%">
+                <img src="{{ post.featured_image.url }}" alt="Image uploaded by user">
                 {% endif %}
             </div>
         </div>
@@ -57,13 +57,6 @@
                             {% endif %}
                             <span class="text-secondary">{{ post.number_of_likes }}</span>
                         </strong>
-                    </div>
-                    <div class="col-1">
-                        {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            {{ total_comments }}
-                        </strong>
-                        {% endwith %}
                     </div>
                 </div>
             </div>
