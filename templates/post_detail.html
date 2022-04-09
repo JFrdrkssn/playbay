@@ -33,7 +33,7 @@
                     {{ post.content | safe }}
                 </p>
                 <div class="row">
-                    <div class="col-1">
+                    <div class="col-2 mt-5">
                         <strong>
                             <!-- Displays solid or outline icons for like/unlike if user is logged in -->
                             {% if user.is_authenticated %}
@@ -57,9 +57,10 @@
                             {% endif %}
                             <span class="text-secondary">{{ post.number_of_likes }}</span>
                         </strong>
-                        <div class="col mb-4 button-list">
+                        <div class="mt-4 button-list">
                             {% if user == post.author %}
-                            <a href="{% url 'edit_post' post.pk %}" class="post-link edit-btn text-white">Edit</a>
+                            <a href="{% url 'edit_post' post.pk %}" class="post-link">Edit</a>
+                            <a href="{% url 'delete_post' post.pk %}" class="post-link">Delete</a>
                             {% endif %}
                         </div>
                     </div>
