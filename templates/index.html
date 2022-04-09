@@ -24,6 +24,8 @@
                                         <p class="author">Author: {{ post.author }}</p>
                                     </div>
                                 </div>
+                            </a>
+                            <a href="{% url 'post_detail' post.pk %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.excerpt }}</p>
 
@@ -31,6 +33,9 @@
                                 <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
                                     {{ post.number_of_likes }}</p>
                             </a>
+                            {% if user == post.author %}
+                            <a href="{% url 'edit_post' post.pk %}" class="post-link">Edit</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
