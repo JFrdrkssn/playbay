@@ -49,8 +49,15 @@ body {
     background-color: transparent;
 }
 
+/* Image */
+
 .image-container {
     position: relative;
+}
+
+.image-container img {
+    height: 16vh;
+    object-fit: cover;
 }
 
 .image-flash {
@@ -77,7 +84,7 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: rgb(15, 40, 80);
     color: white;
     position: relative;
 }
@@ -87,6 +94,10 @@ body {
     overflow: hidden;
 }
 
+.masthead-image img {
+    object-fit: cover;
+}
+
 .masthead-image:after {
     content: "";
     position: absolute;
@@ -94,7 +105,7 @@ body {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: rgba(205, 198, 0, 0.2);
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
