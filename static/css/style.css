@@ -9,6 +9,10 @@ body {
     color: rgb(0, 55, 145);
 }
 
+.box-shadow {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
 /* Header */
 
 .brand {
@@ -95,6 +99,7 @@ body {
 }
 
 .masthead-image img {
+    width: 100%;
     object-fit: cover;
 }
 
