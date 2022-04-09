@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm, AddPostForm, EditPostForm
@@ -100,6 +101,16 @@ class EditPost(generic.UpdateView):
     model = Post
     form_class = EditPostForm
     template_name = 'edit_post.html'
+
+
+class DeletePost(generic.DeleteView):
+    """
+    
+    """
+
+    model = Post
+    template_name = 'delete_post.html'
+    success_url = reverse_lazy('home')
 
 
 class PostLike(View):
