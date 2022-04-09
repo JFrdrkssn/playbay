@@ -60,6 +60,7 @@
                         <div class="mt-4 button-list">
                             {% if user == post.author %}
                             <a href="{% url 'edit_post' post.pk %}" class="post-link">Edit</a>
+                            |
                             <a href="{% url 'delete_post' post.pk %}" class="post-link">Delete</a>
                             {% endif %}
                         </div>
