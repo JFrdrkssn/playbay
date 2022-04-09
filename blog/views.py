@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, AddPostForm, EditPostForm
 
 
 class PostList(generic.ListView):
@@ -82,8 +82,8 @@ class AddPost(generic.CreateView):
     """
 
     model = Post
+    form_class = AddPostForm
     template_name = 'add_post.html'
-    fields = ('title', 'excerpt', 'content', 'featured_image')
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -98,8 +98,8 @@ class EditPost(generic.UpdateView):
     """
 
     model = Post
+    form_class = EditPostForm
     template_name = 'edit_post.html'
-    fields = ('title', 'excerpt', 'content')
 
 
 class PostLike(View):
