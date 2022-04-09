@@ -83,10 +83,12 @@ class AddPost(generic.CreateView):
 
     model = Post
     template_name = 'add_post.html'
-    fields = '__all__'
+    fields = ('title', 'excerpt', 'content', 'featured_image')
 
     def form_valid(self, form):
         form.instance.author = self.request.user
+        form.instance.liked = False
+        form.instance.status = 1
         return super().form_valid(form)
 
 
