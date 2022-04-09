@@ -7,11 +7,11 @@
         <div class="form-group">
             {% if user.is_authenticated %}
 
-            <h3 class="text-center" style="margin-top: 1.3em;">Create a post here, {{ user.username }}</h3>
+            <h3 class="text-center" style="margin-top: 1.3em;">Edit your post here, {{ user.username }}</h3>
             <form method="post" style="margin-top: 1.3em;" enctype="multipart/form-data">
                 {{ form.as_p }}
                 {% csrf_token %}
-                <button type="submit" class="btn btn-primary btn-lg">Post!</button>
+                <button type="submit" class="btn btn-primary btn-lg">Edit!</button>
             </form>
             {% endif %}
         </div>
