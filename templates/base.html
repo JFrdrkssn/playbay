@@ -50,7 +50,11 @@
                     {% endif %}
                 </ul>
                 <span class="text-blue">
+                    {% if user.is_authenticated %}
                     Welcome, {{ user.username }}
+                    {% else %}
+                    Play Has No Limits&trade;
+                    {% endif %}
                 </span>
             </div>
         </div>
