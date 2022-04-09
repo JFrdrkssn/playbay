@@ -21,9 +21,9 @@ class PostDetail(View):
     
     """
 
-    def get(self, request, id, *args, **kwargs):
+    def get(self, request, pk, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, id=id)
+        post = get_object_or_404(queryset, pk=pk)
         comments = post.comments.order_by('created_on')
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
@@ -41,9 +41,9 @@ class PostDetail(View):
             },
         )
 
-    def post(self, request, id, *args, **kwargs):
+    def post(self, request, pk, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, id=id)
+        post = get_object_or_404(queryset, pk=pk)
         comments = post.comments.order_by('created_on')
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
@@ -90,6 +90,16 @@ class AddPost(generic.CreateView):
         form.instance.liked = False
         form.instance.status = 1
         return super().form_valid(form)
+
+
+class EditPost(generic.UpdateView):
+    """
+    
+    """
+
+    model = Post
+    template_name = 'edit_post.html'
+    fields = ('title', 'excerpt', 'content')
 
 
 class PostLike(View):
