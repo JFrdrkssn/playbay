@@ -111,7 +111,7 @@ body {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: rgba(205, 198, 0, 0.2);
+    background: rgba(0, 21, 250, 0.2);
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -163,25 +163,25 @@ body {
 }
 
 .link {
-    color: #23BBBB;
+    color: rgb(0, 76, 199);
     text-decoration: none;
 }
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: #25323f;
     text-decoration: underline;
 }
 
 .btn-like {
-    color: #E84610;
+    color: rgb(0, 55, 145);
     border: none;
     background: transparent;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: rgb(0, 76, 199);
     background: transparent;
     border: none;
 }
