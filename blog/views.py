@@ -56,7 +56,7 @@ class PostDetail(View):
         # to comment form when logged in
         if comment_form.is_valid():
             comment_form.instance.email = request.user.email
-            comment_form.instance.username = request.user.username
+            comment_form.instance.user = request.user
             # Save the comment to the correct post
             comment = comment_form.save(commit=False)
             comment.post = post
