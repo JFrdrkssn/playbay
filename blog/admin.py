@@ -21,9 +21,9 @@ class CommentAdmin(admin.ModelAdmin):
     The Comment section of the admin page
     """
 
-    list_display = ('name', 'body', 'post', 'created_on', 'approved')
+    list_display = ('user', 'body', 'post', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')
-    search_fields = ('name', 'email', 'body')
+    search_fields = ('user', 'email', 'body')
     actions = ['approve_comments']
 
     def approve_comments(self, request, queryset):
