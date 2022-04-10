@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="form-group text-center">
-            {% if user.is_authenticated %}
+            {% if user == post.author %}
 
             <h3 class="text-center text-blue" style="margin-top: 1.3em;">{{ user.username }}, delete {{ post.title }}?
             </h3>
@@ -16,6 +16,10 @@
                     <button type="submit" class="btn btn-danger btn-lg">Delete post!</button>
                 </div>
             </form>
+            {% else %}
+            <h3 class="text-center text-blue" style="margin-top: 1.3em;">{{ user.username }}
+            </h3>
+            <p>You do not have permission to delete this post.</p>
             {% endif %}
         </div>
     </div>

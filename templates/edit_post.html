@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="form-group">
-            {% if user.is_authenticated %}
+            {% if user == post.author %}
 
             <h3 class="text-center" style="margin-top: 1.3em;">Edit your post here, {{ user.username }}</h3>
             <form method="post" style="margin-top: 1.3em;" enctype="multipart/form-data">
@@ -13,6 +13,10 @@
                 {% csrf_token %}
                 <button type="submit" class="btn btn-primary btn-lg">Edit!</button>
             </form>
+            {% else %}
+            <h3 class="text-center text-blue" style="margin-top: 1.3em;">{{ user.username }}
+            </h3>
+            <p>You do not have permission to edit this post.</p>
             {% endif %}
         </div>
     </div>
