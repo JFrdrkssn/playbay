@@ -53,6 +53,10 @@ body {
     background-color: transparent;
 }
 
+.card-title {
+    margin-top: 0.5rem;
+}
+
 /* Image */
 
 .image-container {
