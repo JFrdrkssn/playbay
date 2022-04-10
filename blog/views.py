@@ -118,8 +118,8 @@ class PostLike(View):
     
     """
 
-    def post(self, request, id):
-        post = get_object_or_404(Post, id=id)
+    def post(self, request, pk):
+        post = get_object_or_404(Post, pk=pk)
 
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
@@ -127,4 +127,4 @@ class PostLike(View):
             post.likes.add(request.user)
 
         # Reloads page when liking or unliking
-        return HttpResponseRedirect(reverse('post_detail', args=[id]))
+        return HttpResponseRedirect(reverse('post_detail', args=[pk]))

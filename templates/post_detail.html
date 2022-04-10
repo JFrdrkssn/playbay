@@ -37,17 +37,17 @@
                         <strong>
                             <!-- Displays solid or outline icons for like/unlike if user is logged in -->
                             {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'post_like' post.id %}" method="POST">
+                            <form class="d-inline" action="{% url 'post_like' post.pk %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
 
-                                <button type="submit" name="blogpost_id" value="{{post.id}}" class="btn-like"><i
+                                <button type="submit" name="blogpost_id" value="{{post.pk}}" class="btn-like"><i
                                         class="fas fa-heart"></i></button>
 
                                 {% else %}
 
-                                <button type="submit" name="blogpost_id" value="{{post.id}}" class="btn-like"><i
-                                        class="fas fa-heart"></i></button>
+                                <button type="submit" name="blogpost_id" value="{{post.pk}}" class="btn-like"><i
+                                        class="far fa-heart"></i></button>
 
                                 {% endif %}
                             </form>
