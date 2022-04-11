@@ -42,18 +42,18 @@
                                 {% if liked %}
 
                                 <button type="submit" name="blogpost_id" value="{{post.pk}}" class="btn-like"><i
-                                        class="fas fa-heart"></i></button>
+                                        class="fas fa-plus-square"></i></button>
 
                                 {% else %}
 
                                 <button type="submit" name="blogpost_id" value="{{post.pk}}" class="btn-like"><i
-                                        class="far fa-heart"></i></button>
+                                        class="far fa-plus-square"></i></button>
 
                                 {% endif %}
                             </form>
                             <!-- If user is not logged in, show outline icon -->
                             {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            <span class="text-secondary"><i class="far fa-plus-square"></i></span>
                             {% endif %}
                             <span class="text-secondary">{{ post.number_of_likes }}</span>
                         </strong>
