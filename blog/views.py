@@ -3,6 +3,8 @@ from django.views import generic, View
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
+from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 from .models import Post
 from .forms import CommentForm, AddPostForm, EditPostForm
 
@@ -61,6 +63,7 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
+            messages.add_message(request, messages.SUCCESS, 'Commented!')
         else:
             comment_form = CommentForm()
 
@@ -77,7 +80,7 @@ class PostDetail(View):
         )
 
 
-class AddPost(LoginRequiredMixin, generic.CreateView):
+class AddPost(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
     """
     
     """
@@ -85,6 +88,7 @@ class AddPost(LoginRequiredMixin, generic.CreateView):
     model = Post
     form_class = AddPostForm
     template_name = 'add_post.html'
+    success_message = 'Your new post has been added!'
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -93,7 +97,7 @@ class AddPost(LoginRequiredMixin, generic.CreateView):
         return super().form_valid(form)
 
 
-class EditPost(LoginRequiredMixin, generic.UpdateView):
+class EditPost(LoginRequiredMixin, SuccessMessageMixin, generic.UpdateView):
     """
     
     """
@@ -101,9 +105,10 @@ class EditPost(LoginRequiredMixin, generic.UpdateView):
     model = Post
     form_class = EditPostForm
     template_name = 'edit_post.html'
+    success_message = 'Your post has been updated!'
 
 
-class DeletePost(LoginRequiredMixin, generic.DeleteView):
+class DeletePost(LoginRequiredMixin, SuccessMessageMixin, generic.DeleteView):
     """
     
     """
@@ -111,6 +116,7 @@ class DeletePost(LoginRequiredMixin, generic.DeleteView):
     model = Post
     template_name = 'delete_post.html'
     success_url = reverse_lazy('home')
+    success_message = 'Post deleted!'
 
 
 class PostLike(View):
