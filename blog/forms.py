@@ -1,5 +1,8 @@
-from .models import Comment, Post
+from .models import Comment, Post, Category
 from django import forms
+
+choices = Category.objects.all().values_list('name', 'name')
+choice_list = [choice for choice in choices]
 
 
 class CommentForm(forms.ModelForm):
@@ -28,9 +31,12 @@ class AddPostForm(forms.ModelForm):
         """
 
         model = Post
-        fields = ('title', 'excerpt', 'content', 'featured_image')
+        fields = ('category', 'title', 'excerpt', 'content', 'featured_image')
 
         widgets = {
+            'category': forms.Select(choices=choice_list, attrs={
+                'class': 'form-select',
+                }),
             'title': forms.TextInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Required'
