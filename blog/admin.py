@@ -1,6 +1,17 @@
 from django.contrib import admin
-from .models import Post, Comment
+from .models import Post, Comment, Category
 from django_summernote.admin import SummernoteModelAdmin
+
+
+@admin.register(Category)
+class PostAdmin(admin.ModelAdmin):
+    """
+    The Category of posts of the admin page
+    """
+
+    list_display = ('name',)
+    search_fields = ['name']
+    list_filter = ('name',)
 
 
 @admin.register(Post)
