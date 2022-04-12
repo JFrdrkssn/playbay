@@ -8,6 +8,9 @@
         <!-- Posts -->
         <div class="col-12 mt-3 left">
             <div class="row">
+                {% if not post in post_list %}
+                <div class="text-center text-blue mt-4">Empty void</div>
+                {% endif %}
                 <!-- Maximum of 3 posts in a row -->
                 {% for post in post_list %}
                 <div class="col-md-4">
