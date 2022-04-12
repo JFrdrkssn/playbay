@@ -47,7 +47,8 @@
                             <!-- Post Edit link if user is author of post -->
                             <div class="button-list">
                                 {% if user == post.author %}
-                                <a href="{% url 'edit_post' post.pk %}" class="post-link edit-btn text-white">Edit</a>
+                                <a href="{% url 'edit_post' post.pk %}"
+                                    class="text-decoration-none text-white btn btn-sm btn-primary">Edit</a>
                                 {% endif %}
                             </div>
                         </div>
