@@ -6,6 +6,7 @@ from cloudinary.models import CloudinaryField
 # Blog post status, 1 is default for posts added by user
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class Category(models.Model):
     """
     Model for categories on the blog.
