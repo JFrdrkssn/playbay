@@ -11,7 +11,8 @@ from .forms import CommentForm, AddPostForm, EditPostForm
 
 class PostList(generic.ListView):
     """
-    
+    View for list of blog post entries.
+    Home page.
     """
 
     model = Post
@@ -22,7 +23,9 @@ class PostList(generic.ListView):
 
 class PostDetail(View):
     """
-    
+    View for a particular post.
+    Render comment form and like functionality
+    for logged in users.
     """
 
     def get(self, request, pk, *args, **kwargs):
@@ -54,12 +57,9 @@ class PostDetail(View):
             liked = True
         comment_form = CommentForm(data=request.POST)
 
-        # Automatically passes in email and username
-        # to comment form when logged in
         if comment_form.is_valid():
             comment_form.instance.email = request.user.email
             comment_form.instance.user = request.user
-            # Save the comment to the correct post
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
@@ -82,7 +82,8 @@ class PostDetail(View):
 
 class AddPost(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
     """
-    
+    View with form for adding posts.
+    Redirects to added post.
     """
 
     model = Post
@@ -99,7 +100,8 @@ class AddPost(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
 
 class EditPost(LoginRequiredMixin, SuccessMessageMixin, generic.UpdateView):
     """
-    
+    View with form for editing posts.
+    Redirects to edited post.
     """
 
     model = Post
@@ -110,7 +112,7 @@ class EditPost(LoginRequiredMixin, SuccessMessageMixin, generic.UpdateView):
 
 class DeletePost(LoginRequiredMixin, SuccessMessageMixin, generic.DeleteView):
     """
-    
+    View with button to confirm deleting posts.
     """
 
     model = Post
@@ -121,7 +123,10 @@ class DeletePost(LoginRequiredMixin, SuccessMessageMixin, generic.DeleteView):
 
 class PostLike(View):
     """
-    
+    View with method for liking posts.
+    Checks if user has liked or not
+    and displays the correct like icon
+    in the templates.
     """
 
     def post(self, request, pk):
