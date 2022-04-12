@@ -14,9 +14,13 @@
                 <button type="submit" class="btn btn-primary btn-lg">Edit!</button>
             </form>
             {% else %}
-            <h3 class="text-center text-blue" style="margin-top: 1.3em;">{{ user.username }}
+            <h3 class="text-center text-blue" style="margin-top: 1.3em;">Whoops!
             </h3>
-            <p>You do not have permission to edit this post.</p>
+            <p class="text-center">
+                {{ user.username }}, you do not have permission to edit this post.<br><a href="{% url 'home' %}"
+                    class="link">Go
+                    back.</a>
+            </p>
             {% endif %}
         </div>
     </div>
