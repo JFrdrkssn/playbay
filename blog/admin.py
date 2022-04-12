@@ -32,10 +32,6 @@ class CommentAdmin(admin.ModelAdmin):
     The Comment section of the admin page
     """
 
-    list_display = ('user', 'body', 'post', 'created_on', 'approved')
-    list_filter = ('approved', 'created_on')
+    list_display = ('user', 'body', 'post', 'created_on')
+    list_filter = ('created_on',)
     search_fields = ('user', 'email', 'body')
-    actions = ['approve_comments']
-
-    def approve_comments(self, request, queryset):
-        queryset.update(approved=True)
