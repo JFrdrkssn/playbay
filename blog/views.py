@@ -139,3 +139,16 @@ class PostLike(View):
 
         # Reloads page when liking or unliking
         return HttpResponseRedirect(reverse('post_detail', args=[pk]))
+
+
+def error_404(request, exception):
+    """
+    Handler for error 404
+    """
+    return render(request, 'error_404.html', status=404)
+
+def error_500(request):
+    """
+    Handler for error 500
+    """
+    return render(request, 'error_500.html', status=500)
