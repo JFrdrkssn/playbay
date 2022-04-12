@@ -5,6 +5,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="form-group">
+            <!-- Show Edit post form if user is post author -->
             {% if user == post.author %}
 
             <h3 class="text-center text-blue" style="margin-top: 1.3em;">Edit your post here, {{ user.username }}</h3>
@@ -13,6 +14,7 @@
                 {% csrf_token %}
                 <button type="submit" class="btn btn-primary btn-lg">Edit!</button>
             </form>
+            <!-- If user is not post author, provide info and a link to home page -->
             {% else %}
             <h3 class="text-center text-blue" style="margin-top: 1.3em;">Whoops!
             </h3>
