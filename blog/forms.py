@@ -1,18 +1,21 @@
 from .models import Comment, Post, Category
 from django import forms
 
+# Loop through category names added on admin page.
+# Add them to choice list select when users adds/edits posts
 choices = Category.objects.all().values_list('name', 'name')
 choice_list = [choice for choice in choices]
 
 
 class CommentForm(forms.ModelForm):
     """
-    
+    Form for commenting on posts.
     """
 
     class Meta:
         """
-        
+        Allowed fields.
+        Remove label for body field.
         """
 
         model = Comment
@@ -22,12 +25,14 @@ class CommentForm(forms.ModelForm):
 
 class AddPostForm(forms.ModelForm):
     """
-    
+    Form for adding posts.
     """
 
     class Meta:
         """
-        
+        Allowed fields.
+        Widgets for styling
+        and placeholder text.
         """
 
         model = Post
@@ -57,12 +62,14 @@ class AddPostForm(forms.ModelForm):
 
 class EditPostForm(AddPostForm):
     """
-    
+    Form for editing posts.
+    Inherits from AddPostForm.
     """
 
     class Meta(AddPostForm.Meta):
         """
-        
+        Exclude image field when editing posts.
+        Inherits from AddPostForm
         """
 
         exclude = ('featured_image',)
