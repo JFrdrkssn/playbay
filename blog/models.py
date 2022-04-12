@@ -3,17 +3,18 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from cloudinary.models import CloudinaryField
 
+# Blog post status, 1 is default for posts added by user
 STATUS = ((0, "Draft"), (1, "Published"))
 
 class Category(models.Model):
     """
-    
+    Model for categories on the blog.
     """
     name = models.CharField(max_length=40)
 
     class Meta:
         """
-        
+        Plural name for category
         """
         verbose_name_plural = 'Categories'
 
@@ -37,7 +38,7 @@ class Post(models.Model):
 
     class Meta:
         """
-        Orders blog posts based on time of creation.
+        Order blog posts based on time of creation.
         Descending order, newest first.
         """
         ordering = ['-created_on']
@@ -64,6 +65,10 @@ class Comment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
+        """
+        Order comments based on time of creation.
+        Descending order, oldest first.
+        """
         ordering = ['created_on']
 
     def __str__(self):
