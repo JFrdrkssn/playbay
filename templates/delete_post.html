@@ -19,7 +19,9 @@
             {% else %}
             <h3 class="text-center text-blue" style="margin-top: 1.3em;">{{ user.username }}
             </h3>
-            <p>You do not have permission to delete this post.</p>
+            <p>You do not have permission to delete this post.<br>
+                <a href="{% url 'home' %}" class="link">Go back.</a>
+            </p>
             {% endif %}
         </div>
     </div>
