@@ -5,6 +5,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="form-group text-center">
+            <!-- Show Delete post button and info if user is post author -->
             {% if user == post.author %}
 
             <h3 class="text-center text-blue" style="margin-top: 1.3em;">{{ user.username }}, delete {{ post.title }}?
@@ -16,6 +17,7 @@
                     <button type="submit" class="btn btn-danger btn-lg">Delete post!</button>
                 </div>
             </form>
+            <!-- If user is not post author, provide info and a link to home page -->
             {% else %}
             <h3 class="text-center text-blue" style="margin-top: 1.3em;">{{ user.username }}
             </h3>
