@@ -39,7 +39,10 @@
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'add_post' %}">Post+</a>
+                        <a class="nav-link" href="{% url 'add_post' %}">
+                            Post
+                            <small class="plus-icon"><i class="fas fa-plus"></i></small>
+                        </a>
                     </li>
                     <!-- Links for not logged in users -->
                     {% else %}
