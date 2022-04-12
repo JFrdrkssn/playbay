@@ -5,26 +5,32 @@
 <div class="container-fluid">
     <div class="row">
 
-        <!-- Blog Entries Column -->
+        <!-- Posts -->
         <div class="col-12 mt-3 left">
             <div class="row">
+                <!-- Maximum of 3 posts in a row -->
                 {% for post in post_list %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
+                            <!-- Post card image -->
                             <a href="{% url 'post_detail' post.id %}" class="post-link">
                                 <div class="image-container box-shadow">
                                     {% if "placeholder" in post.featured_image.url %}
+                                    <!-- Credit: Angelo Abear on Unsplash. Links in README -->
                                     <img class="card-img-top"
                                         src="https://res.cloudinary.com/jfrdrkssn/image/upload/q_auto:eco/v1649246606/header-angelo-abear-unsplash_wclqyn.jpg">
                                     {% else %}
+                                    <!-- Image uploaded by user -->
                                     <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                     {% endif %}
+                                    <!-- Post category flash -->
                                     <div class="image-flash text-center">
                                         <p class="category">{{ post.category }}</p>
                                     </div>
                                 </div>
                             </a>
+                            <!-- Post card info -->
                             <a href="{% url 'post_detail' post.pk %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.excerpt }}</p>
@@ -36,6 +42,7 @@
                                     {{ post.number_of_likes }}
                                 </p>
                             </a>
+                            <!-- Post Edit link if user is author of post -->
                             <div class="button-list">
                                 {% if user == post.author %}
                                 <a href="{% url 'edit_post' post.pk %}" class="post-link edit-btn text-white">Edit</a>
@@ -53,6 +60,7 @@
             </div>
         </div>
     </div>
+    <!-- Pagination -->
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
