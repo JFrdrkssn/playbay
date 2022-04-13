@@ -225,3 +225,11 @@ Lighthouse
   - This not possible right now. It's a planned feature. Since there are only a few posts on the site as of now, this is not an immediate issue.
 - As a User, I want to be able to search for post titles and content.
   - Same as above.
+<br/><br/>
+
+### Registration
+
+- As a User, I want to be able to register an account so I can further interact with the site.
+  - Registration is easy and only has username and password as required fields.
+- As a User, I want to be able to add profile information about myself.
+  - This is not possible right now. It's a planned feature. As the site grows, this would be an essential part of creating a community on the site.
