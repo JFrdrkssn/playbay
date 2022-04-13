@@ -344,3 +344,120 @@ A couple small bugs concerning redirects were due to not referencing the correct
 
 - When clicking the like button and using the browser to go back, you have to click twice.
   <br/><br/>
+
+# **Deployment**
+
+## **Development**
+
+1. Clone [this repository](https://github.com/JFrdrkssn/project4)
+2. Install Python
+3. Install Django and create an app using these commands in your terminal
+
+        pip3 install Django==3.2 gunicorn
+        django-admin startproject your_project_name .
+        python3 manage.py startapp your_app_name
+        pip3 install -r requirements.txt
+        python3 manage.py makemigrations
+        python3 manage.py migrate
+
+- Make sure your INSTALLED_APPS in settings.py look like this:
+    
+        INSTALLED_APPS = [
+            'django.contrib.admin',
+            'django.contrib.auth',
+            'django.contrib.contenttypes',
+            'django.contrib.sessions',
+            'django.contrib.messages',
+            'django.contrib.sites',
+            'allauth',
+            'allauth.account',
+            'allauth.socialaccount',
+            'cloudinary_storage',
+            'django.contrib.staticfiles',
+            'cloudinary',
+            'django_summernote',
+            'crispy_forms',
+            'your_app_name',
+        ]
+
+4. Create or log in to an account on Heroku
+5. Create a new app on Heroku
+6. Open your app on Heroku and go to Resources, Add-ons and search for PostgreSQL
+7. Add PostgreSQL
+8. In the Deploy section on Heroku, go to Deployment method and add your GitHub repository
+9. Create or log in to an account on Cloudinary
+10. Copy your API Environment Variable
+11. Go back to Heroku, Settings and click on Reveal Config Vars
+12. Add your Cloudinary API variable, SECRET_KEY and DISABLE_COLLECTSTATIC. PostgreSQL should already be there.
+    - CLOUDINARY_URL | your_api_variable
+    - SECRET_KEY | your_choice ([Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/))
+    - DISABLE_COLLECTSTATIC | 1
+13. Create an env.py in the root directory, add it to .gitignore and add these lines at the top
+
+        import os
+
+        os.environ["DATABASE_URL"] = "postgresql from your Heroku config vars"
+        os.environ["SECRET_KEY"] = "your secret_key here"
+        os.environ["CLOUDINARY_URL"] = "cloudinary url here"
+
+14. At the top of your settings.py file, add these
+
+        from pathlib import Path
+        import os
+        import dj_database_url
+        from django.contrib.messages import constants as messages
+        if os.path.isfile('env.py'):
+            import env
+
+15. Comment out DATABASES in your settings.py file and add this DATABASES below
+
+        #DATABASES = {
+        #   'default': {
+        #       'ENGINE': 'django.db.backends.sqlite3',
+        #       'NAME': BASE_DIR / 'db.sqlite3',
+        #   }
+        #}
+
+        DATABASES = {
+            'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        }
+
+16. In your settings.py file, make sure DEBUG is set to FALSE
+
+        DEBUG = False
+
+17. In your terminal, run migrations
+
+        python3 manage.py makemigrations
+        python3 manage.py migrate
+
+18. Create a superuser for your site
+
+        python3 manage.py createsuperuser
+
+19. Run your app locally
+
+        python3 manage.py runserver
+<br/><br/>
+
+## **Production**
+
+1. In your settings.py file, set DEBUG to True
+
+        DEBUG = True
+
+2. Add these to your settings.py file, just under DEBUG
+
+        X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+        ALLOWED_HOSTS = ['your_app_name.herokuapp.com', 'localhost']
+
+        ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+3. On Heroku, go to Settings and Reveal Config Vars
+4. Remove DISABLE_COLLECTSTATIC
+5. On Heroku, go to Deploy and scroll down to choose whichever method to deploy you want
+    - You can automatically deploy the app everytime your GitHub repository is updated
+    - You can manually deploy the app
+6. On Heroku, go to Settings and scroll down to Domains where you find the URL to your site
+<br/><br/>
