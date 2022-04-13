@@ -65,3 +65,16 @@ Users can register an account to access full CRUD functionality for posting on t
   - The Play font is used for the site logo. The font has a modern and sleek look while also reminding of the font used by the PlayStation® brand itself.
   - The Poppins font is used everywhere else on the site. It is clear, sleek and provide a good separation between characters, making it easy to read and blending in well.
   - Sans-serif is used as a backup-font.
+
+## **Wireframes**
+
+- [Home](media/wireframes/homewf.png)
+- [Post](media/wireframes/postdetailwf.png)
+- [Add Post](media/wireframes/addwf.png)
+- [Edit Post](media/wireframes/editwf.png)
+- [Delete Post](media/wireframes/deletewf.png)
+- [Register](media/wireframes/regwf.png)
+- [Log in](media/wireframes/linwf.png)
+- [Log out](media/wireframes/loutwf.png)
+
+<br/><br/>
