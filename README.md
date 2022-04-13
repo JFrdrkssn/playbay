@@ -314,3 +314,11 @@ Lighthouse
 | Comment | Comment form invalid | If the form is NOT valid, the user is notified of the error. | ✓ |
 
 <br/><br/>
+
+### **Error Handling**
+
+| Test | Action | Expected Result | Pass |
+| ---- | ------------ | --------------- | ---- |
+| 404 | Wrong URL | If page does not exist, display custom 404 page with information and link to go back. | ✓ |
+
+<br/><br/>
