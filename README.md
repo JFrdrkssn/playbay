@@ -258,3 +258,29 @@ Lighthouse
 - As an Admin, I want to be able to add content specific related content, like categories.
   - On the Admin page, I can create, read, update and delete categories.
 <br/><br/>
+
+## **Manual Testing**
+
+### **Navigation**
+
+| Test | Action | Expected Result | Pass |
+| ---- | ------ | --------------- | ---- |
+| Site logo | Click "PlayBay" | Takes the user to the home page. | ✓ |
+| Home | Click "Home" | Takes the user to the home page. | ✓ |
+| Register | Click "Register" | Takes the user to register page. | ✓ |
+| Register page | Click "Register" | If user registers, redirect to home  | ✓ |
+| Login | Click "Login" | Takes the user to the login page. If user logs in, redirect to home. | ✓ |
+| Login page | Click "Log in" | If user logs in, redirect to home. | ✓ |
+| Logout | Click "Logout" | When logged in, takes the user to the logout page. | ✓ |
+| Log out page | Click "Log out" | If user logs out, redirect to home. | ✓ |
+| Post+ | Click "Post+" | When logged in, takes the user to the add post page. | ✓ |
+| Post+ page | Click "Post!" | If user adds post, redirect to this post. | ✓ |
+| Blog post | Click on a blog post | Takes the user to the specific post. | ✓ |
+| Edit button/link | Click "Edit" | When logged in and author of specific post, the "Edit" button on home or link on blog post pages is displayed. | ✓ |
+| Edit page | Click "Edit"| When logged in and author of specific post, clicking "Edit" on home or blog post pages takes the user to the Edit Post page. | ✓ |
+| Edit post | Click "Edit" | Clicking "Edit" on the Edit Post page, redirect to this post. | ✓ |
+| Delete link | Click "Delete" | When logged in and author of specific post, clicking "Delete" on blog posts is displayed. | ✓ |
+| Delete page | Click "Delete" | When logged in and author of specific post, clicking "Delete" on blog posts takes the user to the Delete Post page. | ✓ |
+| Delete post | Click "Delete" | Clicking "Delete" on the Delete Post page, redirect to home. | ✓ |
+| Social | Click social media icon | Clicking an social media icon link in the footer redirects to the specific site. | ✓ |
+| Unauthorized | Visit page unauthorized | Reaching an edit or delete page through URL manipulation for a specific post the user did not create, display information and a link to go back. | ✓ |
