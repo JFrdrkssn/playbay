@@ -203,3 +203,12 @@ Lighthouse
 <br/><br/>
 
 ## **Testing User Stories from User Experience (UX) Section**
+
+### First Visit
+
+- As a First Time User, I want to intuitively understand what the site is about.
+  - When first visiting the site several elements point to the site subject.
+    - The name and logo of the site is PlayBay, pointing to the connection with PlayStation®.
+    - Posts on the site have an image which looks like the background theme of the PlayStation® console, or images uploaded based on the subject or game connected to the console.
+    - Posts on the site have a label corresponding to the particular category of the post. The categories point to regular labels for game sites, like review and news. Party is a particular category linked to the "group chat" function of the console, again connecting it to PlayStation®.
+    - The navigation bar has a slogan derived directly from PlayStation®, "Play Has No Limits", which is the slogan used for the current generation PlayStation® console.
