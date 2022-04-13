@@ -93,7 +93,7 @@ For this project the GitHub Kanban agile project management tool was used for wo
 
 ## _These features were never implemented due to time constraint._
 
-- Search and filter - A search bar for listing and filtering specific content.
+- Search and filter - A search bar and filter button to quickly find certain content.
   <br/><br/>
 
 ## _These features are planned._
