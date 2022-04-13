@@ -322,3 +322,25 @@ Lighthouse
 | 404 | Wrong URL | If page does not exist, display custom 404 page with information and link to go back. | ✓ |
 
 <br/><br/>
+
+## **Bugs**
+
+### Fixed
+
+[DetailView](media/bugs/pk_or_id.png)
+
+- Django Generic DetailView must be called with either object pk or slug
+  - Fix: Removed references to slugs for URLs and replaced with pk.
+
+[Add comment](media/screenshots/add-comment.png)
+
+- Adding a comment produced IntegrityError due to foreign key constraint due to changing fields in model
+  - Fix: Add new ForeignKey field with a different name in Comment model, linking to User ID.
+
+A couple small bugs concerning redirects were due to not referencing the correct URL path and pk.
+<br/><br/>
+
+### Remaining Found Bugs
+
+- When clicking the like button and using the browser to go back, you have to click twice.
+  <br/><br/>
