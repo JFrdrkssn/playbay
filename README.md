@@ -501,3 +501,4 @@ A couple small bugs concerning redirects were due to not referencing the correct
 ## **Acknowledgements**
 
 - My Mentor, Gerard McBride, for continuous helpful feedback and support.
+- [Stack Overflow](https://stackoverflow.com/) for all kinds of tips and tricks.
