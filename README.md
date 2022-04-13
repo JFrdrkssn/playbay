@@ -194,6 +194,8 @@ The W3C Markup Validator, W3C CSS Validator Services, JSHint and PEP8 were used 
   - [forms.py](media/pep8/formspep.png) 
   - [admin.py](media/pep8/adminpep.png) 
   - [urls.py](media/pep8/urlspep.png)
+- [JSHint](https://jshint.com/)
+  - [JSHint validator](media/jshint.png)
   <br/><br/>
 
 Lighthouse
