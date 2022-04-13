@@ -426,16 +426,26 @@ A couple small bugs concerning redirects were due to not referencing the correct
 
         DEBUG = False
 
-17. In your terminal, run migrations
+17. In your settings.py file, replace STATIC_URL with these lines
+
+        STATIC_URL = '/static/'
+        STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+        STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+        STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+        MEDIA_URL = '/media/'
+        DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+18. In your terminal, run migrations
 
         python3 manage.py makemigrations
         python3 manage.py migrate
 
-18. Create a superuser for your site
+19. Create a superuser for your site
 
         python3 manage.py createsuperuser
 
-19. Run your app locally
+20. Run your app locally
 
         python3 manage.py runserver
 <br/><br/>
