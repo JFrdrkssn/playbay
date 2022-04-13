@@ -245,3 +245,16 @@ Lighthouse
   - When logged in, a user can comment on any posts via a form at the bottom of each post.
 - As a User, I want to be able to like/upvote posts.
   - When logged in, a user can like or unlike posts. This is done on the particular post's page that you want to like/unlike.
+<br/><br/>
+
+### Admin
+
+- Ad an Admin, I want to be able to manage users.
+  - On the Admin page, I can create, read, update and delete users.
+- As an Admin, I want to be able to manage posts.
+  - On the Admin page, I can create, read, update and delete posts.
+- As an Admin, I want to be able to manage comments.
+  - On the Admin page, I can create, read, update and delete comments.
+- As an Admin, I want to be able to add content specific related content, like categories.
+  - On the Admin page, I can create, read, update and delete categories.
+<br/><br/>
