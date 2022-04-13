@@ -233,3 +233,15 @@ Lighthouse
   - Registration is easy and only has username and password as required fields.
 - As a User, I want to be able to add profile information about myself.
   - This is not possible right now. It's a planned feature. As the site grows, this would be an essential part of creating a community on the site.
+<br/><br/>
+
+### Site Interaction
+
+- As a User, I want to be able to post entries.
+  - When logged in, the navigation bar has a "Post+" link. The + sign is golden for added visibility. A user has to provide a category, title, excerpt and content. Images are optional.
+- As a User, I want to be able to edit and delete posts created by me.
+  - When logged in, the home page post list has en "Edit" button if the user is the author of the post. The detailed view of posts by the user has both "Edit" and "Delete" links. The "Edit" page has a form for editing the post except images. The "Delete" page has a big red button with a warning to the user.
+- As a User, I want to be able to comment on posts.
+  - When logged in, a user can comment on any posts via a form at the bottom of each post.
+- As a User, I want to be able to like/upvote posts.
+  - When logged in, a user can like or unlike posts. This is done on the particular post's page that you want to like/unlike.
