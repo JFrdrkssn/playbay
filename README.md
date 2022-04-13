@@ -84,3 +84,27 @@ Users can register an account to access full CRUD functionality for posting on t
 For this project the GitHub Kanban agile project management tool was used for workflow.
 ![Kanban](media/kanban.png)
 <br/><br/>
+
+# **Unfinished Features**
+
+## _These features were never implemented due to time constraint._
+
+- Search and filter - A search bar for listing and filtering specific content.
+  <br/><br/>
+
+## _These features are planned._
+
+- Profile page
+  - A profile page where users can do things like adding profile picture, PlayStation® username and change password.
+    <br/><br/>
+- Nested comment system
+  - A system for replying to certain comments and create threads.
+    <br/><br/>
+- Image copyright control
+  - A system for checking copyright protected material. A first draft would be to implement an "approved" status on uploaded media, where the admin can check validity.
+    <br/><br/>
+- Image resizing and compression
+  - Cloudinary, which is used by the site to store images, has an auto-transform function. This would help resize and compress images to prevent them from being too big and slowing down the site.
+    <br/><br/>
+- Rich text editor - The default text field when adding posts does not provide enough customization. A rich text editor would help format blog post content.
+  <br/><br/>
