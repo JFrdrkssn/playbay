@@ -295,3 +295,22 @@ Lighthouse
 | Comment | Comment         | Display comments with username and date of comment | ✓    |
 
 <br/><br/>
+
+### **Validation**
+
+| Test | Action | Expected Result | Pass |
+| ---- | ------ | --------------- | ---- |
+| Register | Form valid | If the form is valid, a success message notifying the user is displayed. | ✓ |
+| Register | Form invalid | If the form is NOT valid, i.e required field not filled, wrong password format or duplicate username the user is notified of the error. | ✓ |
+| Log in | Form valid | If the form is valid, a success message notifying the user is displayed. | ✓ |
+| Log in | Form invalid | If the form is NOT valid, i.e required field not filled or wrong password, the user is notified of the error. | ✓ |
+| Log out | Logging out | If the user logs out, a success message notifying the user is displayed. | ✓ |
+| Post+ | Add form valid | If the form is valid, a success message notifying the user is displayed. | ✓ |
+| Post+ | Add form invalid | If the form is NOT valid, i.e required field not filled or title already exist the user is notified of the error. | ✓ |
+| Edit post | Edit form valid | If the form is valid, a success message notifying the user is displayed. | ✓ |
+| Edit post | Edit form invalid | If the form is NOT valid, the user is notified of the error. | ✓ |
+| Delete post | Deleting post | If the user deletes a post, a success message notifying the user is displayed. | ✓ |
+| Comment | Comment form valid | If the form is valid, a success message notifying the user is displayed. | ✓ |
+| Comment | Comment form invalid | If the form is NOT valid, the user is notified of the error. | ✓ |
+
+<br/><br/>
