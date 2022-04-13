@@ -130,3 +130,12 @@ For this project the GitHub Kanban agile project management tool was used for wo
 - SQLite has been used in delevopment to store data.
 - PostgreSQL is used in production to store data.
   <br/><br/>
+
+# **Technologies**
+
+## **Languages**
+
+- [HTML](https://en.wikipedia.org/wiki/HTML5)
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://www.w3schools.com/js/js_es6.asp)
+- [Python](https://www.python.org/)
