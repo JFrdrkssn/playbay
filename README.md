@@ -284,3 +284,14 @@ Lighthouse
 | Delete post | Click "Delete" | Clicking "Delete" on the Delete Post page, redirect to home. | ✓ |
 | Social | Click social media icon | Clicking an social media icon link in the footer redirects to the specific site. | ✓ |
 | Unauthorized | Visit page unauthorized | Reaching an edit or delete page through URL manipulation for a specific post the user did not create, display information and a link to go back. | ✓ |
+
+<br/><br/>
+
+### **Features**
+
+| Test    | Action          | Expected Result                                    | Pass |
+| ------- | --------------- | -------------------------------------------------- | ---- |
+| Like    | Click like icon | When clicked, increment/decrement like counter     | ✓    |
+| Comment | Comment         | Display comments with username and date of comment | ✓    |
+
+<br/><br/>
