@@ -293,8 +293,10 @@ Lighthouse
 
 | Test    | Action          | Expected Result                                    | Pass |
 | ------- | --------------- | -------------------------------------------------- | ---- |
-| Like    | Click like icon | When clicked, increment/decrement like counter     | ✓    |
-| Comment | Comment         | Display comments with username and date of comment | ✓    |
+| Like    | Click like icon | When clicked, increment/decrement like counter.     | ✓    |
+| Comment | Comment         | Display comments with username and date of comment. | ✓    |
+| Message | Form/button validation | Display message when logging in/out, registering, commenting and adding, editing and deleting posts.  | ✓    |
+| Message JS | Form/button validation | Messages displayed should disappear automatically after 5 seconds. | ✓    |
 
 <br/><br/>
 
