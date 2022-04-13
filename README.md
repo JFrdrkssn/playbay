@@ -114,3 +114,19 @@ For this project the GitHub Kanban agile project management tool was used for wo
 ## ERD
 
 ![ERD](media/db_diagram_playbay.png 'ERD')
+
+## User Model (AllAuth)
+
+- ID of User is linked via a ForeignKey relation in the Post Model author field.
+- ID of User is linked via a ForeignKey relation in the Post Model likes ManyToMAny field.
+- ID of User is linked via a ForeignKey relation in the Comment Model user field.
+
+## Post Model
+
+- ID of Post is linked via a ForeignKey relation in the Comment Model post field.
+
+## Database
+
+- SQLite has been used in delevopment to store data.
+- PostgreSQL is used in production to store data.
+  <br/><br/>
