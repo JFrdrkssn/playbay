@@ -78,3 +78,9 @@ Users can register an account to access full CRUD functionality for posting on t
 - [Log out](media/wireframes/loutwf.png)
 
 <br/><br/>
+
+# **Agile**
+
+For this project the GitHub Kanban agile project management tool was used for workflow.
+![Kanban](media/kanban.png)
+<br/><br/>
