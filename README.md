@@ -77,6 +77,10 @@ Users can register an account to access full CRUD functionality for posting on t
 - [Log in](media/wireframes/linwf.png)
 - [Log out](media/wireframes/loutwf.png)
 
+## **Bad UX**
+When a user posts or edits a post, the resulting text content is displayed as one chunk of text. When editing a post created as a superuser on the admin panel (Summernote WYSIWYG), the form field when editing on the deployed site shows Markdown being applied. A normal user would have to implement their own Markdown or let a superuser edit the post on the admin panel. This is not preferable at all.
+<br/>
+A reference to adding a Rich Text Editor as a future feature can be found below.
 <br/><br/>
 
 # **Agile**
