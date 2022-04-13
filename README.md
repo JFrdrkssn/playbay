@@ -212,3 +212,16 @@ Lighthouse
     - Posts on the site have an image which looks like the background theme of the PlayStation® console, or images uploaded based on the subject or game connected to the console.
     - Posts on the site have a label corresponding to the particular category of the post. The categories point to regular labels for game sites, like review and news. Party is a particular category linked to the "group chat" function of the console, again connecting it to PlayStation®.
     - The navigation bar has a slogan derived directly from PlayStation®, "Play Has No Limits", which is the slogan used for the current generation PlayStation® console.
+<br/><br/>
+
+### Navigation
+
+- As a User, I want to intuitively understand how to navigate the site.
+  - The navigation bar links at the top of the site have clear names for what they do. Post+ is the least obvious, but the target audience most likely understands it purpose.
+  - The site redirects the user to the correct site based on input. If a user likes a post, the page simply reloads. If a user logs in, it redirects to the home page. If a user edits their post, they are redirected to the edited post.
+- As a User, I want it to be clear where I am on the site.
+  - The links in the navigation bar does not have an "active" state. Regardless, there are few pages and each one is sufficiently different as to not confuse anyone. Clicking "Login", for example, takes the user to a form, which is obviously not a post.
+- As a User, I want to be able to search and filter posts based on category.
+  - This not possible right now. It's a planned feature. Since there are only a few posts on the site as of now, this is not an immediate issue.
+- As a User, I want to be able to search for post titles and content.
+  - Same as above.
