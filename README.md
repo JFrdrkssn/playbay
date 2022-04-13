@@ -139,3 +139,43 @@ For this project the GitHub Kanban agile project management tool was used for wo
 - [CSS](https://en.wikipedia.org/wiki/CSS)
 - [JavaScript](https://www.w3schools.com/js/js_es6.asp)
 - [Python](https://www.python.org/)
+
+## **Programs**
+
+- [Gitpod](https://gitpod.io)
+  - Gitpod was used to host a virtual workspace.
+- [Git](https://git-scm.com/)
+  - Git was used for version control by utilizing the Gitpod terminal to commit and push to GitHub.
+- [GitHub](https://github.com/)
+  - GitHub is used to store the projects code after being pushed from Git.
+- [Django](https://www.djangoproject.com/)
+  - Django was used as the primary framework for building the project.
+- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+  - Crispy Forms was used to render the comment form on the site.
+- [Django AllAuth](https://django-allauth.readthedocs.io/en/latest/index.html)
+  - AllAuth was used for user authentication.
+- [Bootstrap](https://getbootstrap.com/)
+  - Bootstrap was used for styling and responsiveness.
+- [Cloudinary](https://cloudinary.com/)
+  - Cloudinary is used for image hosting.
+- [SQLite](https://www.sqlite.org/index.html)
+  - SQLite was used as the database for development.
+- [PostgreSQL](https://www.postgresql.org/)
+  - PostgreSQL is used as the deployed database.
+- [Heroku](https://id.heroku.com/login)
+  - Heroku is used to host the application.
+- [Gunicorn](https://gunicorn.org/)
+  - Gunicorn is used for deploying the project to Heroku.
+- [dbdiagram](https://dbdiagram.io/home)
+  - dbdiagram was used to create the ERD.
+- [Google Fonts](https://fonts.google.com/)
+  - Google fonts was used to import the Play and Poppins fonts.
+- [Font Awesome](https://fontawesome.com/)
+  - Font Awesome was used to style instruction icons.
+- [Balsamiq](https://balsamiq.com/)
+  - Balsamiq was used to create wireframes for design purposes.
+- [Image-Resizer](https://imageresizer.com/)
+  - Image-Resizer was used to resize images.
+- [TinyPNG](https://tinypng.com/) 
+  - TinyPNG was used to compress image files.
+  <br/><br/>
