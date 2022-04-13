@@ -50,3 +50,18 @@ Users can register an account to access full CRUD functionality for posting on t
       - As an Admin, I want to be able to add content specific related content, like categories.
 
   <br/><br/>
+
+## **Design**
+
+- **Color Scheme**
+
+  - A white background coupled with shades of blue, gold and grey provides clear contrast that is also easy on the eyes. It matches the aesthetic profile of the PlayStation® 5 console, giving a clear connection between the two.
+  - The navigation bar and footer of the site has a sharper white, providing a very slight contrast to the main contents of the site.
+  - Images for posts can be uploaded by a user, therefore the prominent white color coupled mostly with blue helps create a neutral background for images of any composition.
+  - Some smaller elements are gold. In the world of PlayStation®, the gold/yellow color scheme is part of a special subscription model, and provide a great contrast to the white and blue colors that are part of the core brand color scheme.
+
+- **Typography**
+
+  - The Play font is used for the site logo. The font has a modern and sleek look while also reminding of the font used by the PlayStation® brand itself.
+  - The Poppins font is used everywhere else on the site. It is clear, sleek and provide a good separation between characters, making it easy to read and blending in well.
+  - Sans-serif is used as a backup-font.
