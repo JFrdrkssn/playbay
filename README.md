@@ -295,8 +295,7 @@ Lighthouse
 | ------- | --------------- | -------------------------------------------------- | ---- |
 | Like    | Click like icon | When clicked, increment/decrement like counter.     | ✓    |
 | Comment | Comment         | Display comments with username and date of comment. | ✓    |
-| Message | Form/button validation | Display message when logging in/out, registering, commenting and adding, editing and deleting posts.  | ✓    |
-| Message JS | Form/button validation | Messages displayed should disappear automatically after 5 seconds. | ✓    |
+
 
 <br/><br/>
 
@@ -316,6 +315,8 @@ Lighthouse
 | Delete post | Deleting post | If the user deletes a post, a success message notifying the user is displayed. | ✓ |
 | Comment | Comment form valid | If the form is valid, a success message notifying the user is displayed. | ✓ |
 | Comment | Comment form invalid | If the form is NOT valid, the user is notified of the error. | ✓ |
+| Message | Form/button validation | Display message when logging in/out, registering, commenting and adding, editing and deleting posts. | ✓ |
+| Message JS | Form/button validation | Messages displayed should disappear automatically after 5 seconds. | ✓ |
 
 <br/><br/>
 
