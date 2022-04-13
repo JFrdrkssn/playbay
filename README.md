@@ -16,3 +16,37 @@ Users can register an account to access full CRUD functionality for posting on t
 
 <br/><br/>
 
+# **User Experience (UX)**
+
+## **User stories**
+
+- ### First visit
+
+  - As a User, I want to intuitively understand what the site is about.
+
+- ### Navigation
+
+  - As a User, I want to intuitively understand how to navigate the site.
+  - As a User, I want it to be clear where I am on the site.
+  - As a User, I want to be able to search and filter posts based on category.
+  - As a User, I want to be able to search for post titles and content.
+
+- ### Registration
+
+  - As a User, I want to be able to register an account so I can further interact with the site.
+  - As a User, I want to be able to add profile information about myself.
+
+- ### Site Interaction
+
+  - As a User, I want to be able to post entries.
+  - As a User, I want to be able to edit and delete posts created by me.
+  - As a User, I want to be able to comment on posts.
+  - As a User, I want to be able to like/upvote posts.
+
+- ### Admin
+
+      - As an Admin, I want to be able to manage posts.
+      - As an Admin, I want to be able to manage comments.
+      - As an Admin, I want to be able to add content specific related content, like categories.
+
+  <br/><br/>
