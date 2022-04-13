@@ -108,3 +108,9 @@ For this project the GitHub Kanban agile project management tool was used for wo
     <br/><br/>
 - Rich text editor - The default text field when adding posts does not provide enough customization. A rich text editor would help format blog post content.
   <br/><br/>
+
+# **Data Model**
+
+## ERD
+
+![ERD](media/db_diagram_playbay.png 'ERD')
