@@ -179,3 +179,25 @@ For this project the GitHub Kanban agile project management tool was used for wo
 - [TinyPNG](https://tinypng.com/) 
   - TinyPNG was used to compress image files.
   <br/><br/>
+
+# **Testing**
+
+The W3C Markup Validator, W3C CSS Validator Services, JSHint and PEP8 were used to validate the site to ensure there were no syntax errors in the project.
+
+- [W3C Markup Validator](https://validator.w3.org/nu/) show no errors.
+  - [.html](media/w3cvalidation/htmlvalid.png)
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) show no errors.
+  - [style.css](media/w3cvalidation/cssvalid.png)
+- [PEP8](http://pep8online.com/) show no errors except lines being too long. 
+  - [views.py](media/pep8/viewspep.png) 
+  - [models.py](media/pep8/modelspep.png) 
+  - [forms.py](media/pep8/formspep.png) 
+  - [admin.py](media/pep8/adminpep.png) 
+  - [urls.py](media/pep8/urlspep.png)
+  <br/><br/>
+
+Lighthouse
+
+![Lighthouse](media/lighthouse.png)
+
+<br/><br/>
