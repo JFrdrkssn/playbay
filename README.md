@@ -45,9 +45,9 @@ Users can register an account to access full CRUD functionality for posting on t
 
 - ### Admin
 
-      - As an Admin, I want to be able to manage posts.
-      - As an Admin, I want to be able to manage comments.
-      - As an Admin, I want to be able to add content specific related content, like categories.
+    - As an Admin, I want to be able to manage posts.
+    - As an Admin, I want to be able to manage comments.
+    - As an Admin, I want to be able to add content specific related content, like categories.
 
   <br/><br/>
 
